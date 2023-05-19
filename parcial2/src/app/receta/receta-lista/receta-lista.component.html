@@ -1,0 +1,26 @@
+<section class="py-5 text-center container">
+
+  <div class="row py-lg-5" style="background-color:#120E2F">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <h1 class="fw-light" id="receta">Atnonio </h1>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col mb-2" *ngFor="let receta of recetas">
+          <div class="card p-2" style="width: 20rem; height: 33rem">
+              <img
+                class="card"
+                src="{{ receta.imagen }}"
+                alt="{{ receta.nombre }}"
+              />
+              <div class="card-body">
+                <h5 class="card-title">{{ receta.nombre }}</h5>
+                  <p class="card-text">Calificacion:{{ receta.estrellas }} de {{ receta.cantidadOpiniones }} opiniones Duracion:{{ receta.duracion}} | Dificulatd: {{ receta.dificultad}} Por:{{ receta.autorReceta}}</p>
+              </div>
+           </div>
+      </div>
+   </div>
+</div>
